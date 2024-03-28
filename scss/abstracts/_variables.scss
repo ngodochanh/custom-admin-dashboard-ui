@@ -1,57 +1,112 @@
+@use 'sass:map';
+
 /********************\
 #COLORS
 \********************/
+$e-colors: (
+  'primary': (
+    name: primary,
+    variations: (
+      main: #34426f,
+      100: #a9b0c2,
+      200: #a0a8bc,
+      300: #969fb5,
+      400: #2f3c65,
+      500: #181f34,
+      600: #161c2f,
+    ),
+  ),
+  'secondary': (
+    name: secondary,
+    variations: (
+      main: #7d83ff,
+      100: #bdbfff,
+      200: #c3c5ff,
+      300: #c8caff,
+      400: #414384,
+      500: #3b3d78,
+      600: #36376d,
+    ),
+  ),
+  'orange': (
+    name: 'warn',
+    variations: (
+      main: #fd8b49,
+      100: #fdc4a1,
+      200: #fdc9aa,
+      300: #fdceb2,
+      400: #fda977,
+      500: #fda069,
+      600: #fd965a,
+    ),
+  ),
+  'green': (
+    name: 'success',
+    variations: (
+      main: #5fab76,
+      100: #add4b8,
+      200: #b4d8be,
+      300: #bbdcc4,
+      400: #87c097,
+      500: #7bba8d,
+      600: #6eb382,
+    ),
+  ),
+  'blue': (
+    name: 'info',
+    variations: (
+      main: #4a529d,
+      100: #9faac4,
+      200: #a8b2c9,
+      300: #b0b9ce,
+      400: #7184a9,
+      500: #6378a0,
+      600: #536b97,
+    ),
+  ),
+  'red': (
+    name: 'danger',
+    variations: (
+      main: #c44f4f,
+      100: #c098a2,
+      200: #c6a1aa,
+      300: #cbaab2,
+      400: #a36978,
+      500: #9a5a6a,
+      600: #a85661,
+    ),
+  ),
+  'gray': (
+    name: 'gray',
+    variations: (
+      main: #f3f3f9,
+      50: #fefefe,
+      100: #fafafa,
+      200: #f5f5fa,
+      300: #f7f7fa,
+      400: #dddde2,
+      500: #c9c9cd,
+      600: #9191a1,
+    ),
+  ),
+);
+
 :root {
-  --e-primary-clr: #34426f;
-  --e-primary-100-clr: #a9b0c2;
-  --e-primary-200-clr: #a0a8bc;
-  --e-primary-300-clr: #969fb5;
-  --e-primary-400-clr: #2f3c65;
-  --e-primary-500-clr: #181f34;
-  --e-primary-600-clr: #161c2f;
-  --e-secondary-clr: #7d83ff;
-  --e-secondary-100-clr: #bdbfff;
-  --e-secondary-200-clr: #c3c5ff;
-  --e-secondary-300-clr: #c8caff;
-  --e-secondary-400-clr: #414384;
-  --e-secondary-500-clr: #3b3d78;
-  --e-secondary-600-clr: #36376d;
-  --e-warn-clr: #fd8b49;
-  --e-warn-100-clr: #fdc4a1;
-  --e-warn-200-clr: #fdc9aa;
-  --e-warn-300-clr: #fdceb2;
-  --e-warn-400-clr: #fda977;
-  --e-warn-500-clr: #fda069;
-  --e-warn-600-clr: #fd965a;
-  --e-success-clr: #5fab76;
-  --e-success-100-clr: #add4b8;
-  --e-success-200-clr: #b4d8be;
-  --e-success-300-clr: #bbdcc4;
-  --e-success-400-clr: #87c097;
-  --e-success-500-clr: #7bba8d;
-  --e-success-600-clr: #6eb382;
-  --e-info-clr: #4a529d;
-  --e-info-100-clr: #9faac4;
-  --e-info-200-clr: #a8b2c9;
-  --e-info-300-clr: #b0b9ce;
-  --e-info-400-clr: #7184a9;
-  --e-info-500-clr: #6378a0;
-  --e-info-600-clr: #536b97;
-  --e-danger-clr: #c44f4f;
-  --e-danger-100-clr: #c098a2;
-  --e-danger-200-clr: #c6a1aa;
-  --e-danger-300-clr: #cbaab2;
-  --e-danger-400-clr: #a36978;
-  --e-danger-500-clr: #9a5a6a;
-  --e-danger-600-clr: #a85661;
-  --e-gray-clr: #f3f3f9;
-  --e-gray-50-clr: #fefefe;
-  --e-gray-100-clr: #fafafa;
-  --e-gray-200-clr: #f5f5fa;
-  --e-gray-300-clr: #f7f7fa;
-  --e-gray-400-clr: #dddde2;
-  --e-gray-500-clr: #c9c9cd;
-  --e-gray-600-clr: #9191a1;
+  @each $block, $children in $e-colors {
+    @each $child, $value in $children {
+      $name: map.get($children, name);
+      @if type-of($value) == map {
+        @each $item, $val in $value {
+          @if $item == main {
+            --e-#{$name}-clr: #{$val};
+          } @else {
+            --e-#{$name}-#{$item}-clr: #{$val};
+          }
+        }
+      }
+    }
+  }
+
   /* ******************** COLORS ******************** */
   --global-bg-clr: var(--e-gray-clr);
   /* Sidebar */
@@ -103,10 +158,11 @@
   --btn-warn-text-clr: var(--e-warn-clr);
   --btn-danger-bg-clr: var(--e-danger-100-clr);
   --btn-danger-text-clr: var(--e-danger-clr);
+
   /* ******************** TYPOGRAPHY ******************** */
-  --base-font-size: 62.5%;
-  --heading-font-family: "Manrope", sans-serif;
-  --body-font-family: "Poppins", sans-serif;
+  --base-font-size: 62.5%; // 10px (10 / 16) * 100 = 62.5
+  --heading-font-family: 'Manrope', sans-serif;
+  --body-font-family: 'Poppins', sans-serif;
   --heading-1: 2.8rem;
   --heading-2: 2.4rem;
   --heading-3: 2rem;
@@ -127,5 +183,3 @@
   --font-weight-medium: 500;
   --font-weight-bold: 700;
 }
-
-/*# sourceMappingURL=styles.css.map */
