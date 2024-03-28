@@ -49,4 +49,7 @@
   }
 }
 
-// $total-cols: 12;
+// Offset columns - Non-responsive
+@include offset-grid($total-cols, false);
+// Offset columns - Responsive
+@include offset-grid($total-cols, true);
