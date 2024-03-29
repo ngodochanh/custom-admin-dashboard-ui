@@ -1,5 +1,6 @@
 @use './variables' as *;
 @use '../layout/break-points' as *;
+@use 'sass:map';
 
 // Creating grid columns
 @mixin grid($total, $number) {
@@ -41,5 +42,82 @@
         }
       }
     }
+  }
+}
+
+/*******************************/
+// Lặp qua bản đồ phức tạp
+@mixin loop-deep-map($deep-map) {
+  @each $block, $children in $deep-map {
+    @each $subblock, $values in $children {
+      // Variables
+      $base-class: map.get($children, class);
+      $suffix: map.get($children, suffix);
+      $property: map.get($children, property);
+      $responsive: if(map-has-key($children, responsive), map.get($children, responsive), true);
+      $important: if(map-has-key($children, important), map.get($children, important), true);
+
+      // Gọi mixin vòng lặp để lặp qua bản đồ nội
+      @if type-of($values) == map and $values != null and $base-class != null {
+        @include loop-through-map($values, $base-class, $suffix, $property, $responsive, $important);
+      }
+    }
+  }
+}
+
+// Mixin để lặp qua một bản đồ
+@mixin loop-through-map($map, $base-class: 'e-', $suffix: null, $property: null, $responsive: true, $important: true) {
+  // Lặp qua bản đồ gốc
+  @each $child, $value in $map {
+    @if $value != null {
+      @if $base-class == null {
+        // Tạo selector
+        #{$child} {
+          @include loop-list-property($property, $value, $important);
+        }
+      } @else {
+        // Chọn các lớp
+        .#{$base-class}#{$child}#{$suffix} {
+          @include loop-list-property($property, $value, $important);
+        }
+      }
+    }
+  }
+
+  // RESPONSIVE
+  @if $responsive {
+    // Lặp qua bản đồ các điểm breakpoint
+    @each $break, $value in $containers {
+      @include respond(#{$break}) {
+        // Lặp qua bản đồ gốc
+        @each $child, $value in $map {
+          @if $value != null {
+            @if $base-class == null {
+              // Tạo selector
+              #{$child} {
+                @include loop-list-property($property, $value, $important);
+              }
+            } @else {
+              // Chọn các lớp
+              .#{$base-class}#{$child}#{$suffix}-#{$break} {
+                @include loop-list-property($property, $value, $important);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Lặp qua thuộc tính nếu chứa nhiều hơn 1
+@mixin loop-list-property($property, $value, $important) {
+  @if type-of($property) == list {
+    // Lặp qua danh sách
+    @each $curr-property in $property {
+      #{$curr-property}: #{$value} if($important, !important, unquote(''));
+    }
+  } @else {
+    #{$property}: #{$value} if($important, !important, unquote(''));
   }
 }
