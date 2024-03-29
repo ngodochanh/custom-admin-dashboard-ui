@@ -109,8 +109,12 @@
 
       <div class="e-card">
         <div class="e-card__header">
-          <span class="e-card__title e-fw-bld">Active project</span>
-          <span><i class="ri-arrow-up-line"></i></span>
+          <form class="e-form">
+            <div class="e-form__group">
+              <input type="text" class="e-form__input" placeholder="Search" />
+              <i class="ri-search-line e-form__icon e-fs-14"></i>
+            </div>
+          </form>
         </div>
         <div class="e-card__body">
           <p>
@@ -142,6 +146,30 @@
             <i class="ri-search-line e-form__icon e-fs-14"></i>
           </div>
         </form>
+      </div>
+
+      <div class="e-overflow-auto e-mg-y-20">
+        <table class="e-tbl">
+          <thead class="e-tbl__header">
+            <tr class="e-tbl__row">
+              <th class="e-tbl__head">ID</th>
+              <th class="e-tbl__head">Name</th>
+              <th class="e-tbl__head">Email</th>
+              <th class="e-tbl__head">Project</th>
+              <th class="e-tbl__head">Salary</th>
+            </tr>
+          </thead>
+
+          <tbody class="e-tbl__body">
+            <tr class="e-tbl__row">
+              <td class="e-tbl__data">025</td>
+              <td class="e-tbl__data">John Doe</td>
+              <td class="e-tbl__data">J.doe@ease.com</td>
+              <td class="e-tbl__data">Ease Dashboard</td>
+              <td class="e-tbl__data">$125K</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </body>

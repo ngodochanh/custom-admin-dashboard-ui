@@ -4383,4 +4383,28 @@ h6,
   transform: translateY(-50%);
 }
 
+.e-tbl {
+  width: 100%;
+  overflow: hidden;
+  border-collapse: collapse;
+  border: 0.1rem solid var(--brdr-clr);
+}
+.e-tbl__header {
+  background-color: var(--tbl-header-bg-clr);
+}
+.e-tbl__head {
+  /* thead th */
+  font-weight: var(--font-weight-bold);
+  font-family: var(--heading-font-family);
+  font-size: 1.4rem;
+}
+.e-tbl__row:not(:last-of-type) .e-tbl__data {
+  border-bottom: 0.1rem solid var(--brdr-clr);
+}
+.e-tbl__head, .e-tbl__data {
+  padding: 1.6rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
 /*# sourceMappingURL=styles.css.map */
