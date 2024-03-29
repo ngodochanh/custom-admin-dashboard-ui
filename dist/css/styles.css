@@ -167,6 +167,9 @@
 #BADGES
 \********************/
 /********************\
+#AVATAR
+\********************/
+/********************\
 #CSS RESET
 \********************/
 *,
@@ -4290,6 +4293,67 @@ h6,
 .e-bdg.e-bdg-danger {
   background-color: var(--bdg-danger-bg-clr);
   color: var(--bdg-danger-text-clr);
+}
+
+.e-avat {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.e-avat__img {
+  width: 100%;
+  height: 100%;
+}
+.e-avat.e-avat-30 {
+  width: 3rem;
+  height: 3rem;
+}
+.e-avat.e-avat-35 {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.e-avat.e-avat-40 {
+  width: 4rem;
+  height: 4rem;
+}
+.e-avat.e-avat-45 {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+.e-avat.e-avat-50 {
+  width: 5rem;
+  height: 5rem;
+}
+.e-avat-group {
+  display: flex;
+  align-items: center;
+}
+.e-avat-group .e-avat:not(:first-of-type) {
+  border: 0.2rem solid var(--global-bg-clr);
+  margin-left: -0.8rem;
+}
+
+.e-card {
+  position: relative;
+  background-color: var(--card-bg-clr);
+  border-radius: var(--default-brd-rad);
+  height: 100%;
+  box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.14);
+}
+.e-card__header {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.1rem solid var(--brdr-clr);
+}
+.e-card__title {
+  font-size: var(--card-title);
+  font-family: var(--heading-font-family);
+}
+.e-card__body {
+  padding: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
