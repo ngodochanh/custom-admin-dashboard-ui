@@ -141,6 +141,14 @@
   --container-md: 121.5rem;
   --container-lg: 131.5rem;
   --container-xl: 156rem;
+  /* ******************** COMPONENTS ******************** */
+  --default-brd-rad: 0.4rem;
+  --default-btn-padding: 0.9rem 3rem;
+  --default-btn-sm-padding: 0.6rem 2rem;
+  --default-bdg-padding: 0.4rem 1.2rem;
+  --default-input-padding: 0.9rem 3rem;
+  --default-dropdown-width: 22.5rem;
+  --default-dropdown-mx-height: 35rem;
 }
 
 /********************\
@@ -151,6 +159,12 @@
 \********************/
 /********************\
 #LAYOUT
+\********************/
+/********************\
+#BUTTONS
+\********************/
+/********************\
+#BADGES
 \********************/
 /********************\
 #CSS RESET
@@ -4185,6 +4199,97 @@ h6,
     flex: 0 0 100%;
     max-width: 100%;
   }
+}
+.e-btn {
+  border: 0;
+  border-radius: var(--default-brd-rad);
+  cursor: pointer;
+  padding: var(--default-btn-padding);
+  font-size: var(--btn-size);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s 0s ease-out;
+  background-color: var(--btn-default-bg-clr);
+  color: var(--btn-default-text-clr);
+}
+.e-btn:hover {
+  background-color: var(--e-primary-600-clr);
+}
+.e-btn.e-btn-primary {
+  background-color: var(--btn-primary-bg-clr);
+  color: var(--btn-primary-text-clr);
+}
+.e-btn.e-btn-primary:hover {
+  background-color: var(--e-primary-300-clr);
+}
+.e-btn.e-btn-secondary {
+  background-color: var(--btn-secondary-bg-clr);
+  color: var(--btn-secondary-text-clr);
+}
+.e-btn.e-btn-secondary:hover {
+  background-color: var(--e-secondary-300-clr);
+}
+.e-btn.e-btn-success {
+  background-color: var(--btn-success-bg-clr);
+  color: var(--btn-success-text-clr);
+}
+.e-btn.e-btn-success:hover {
+  background-color: var(--e-success-300-clr);
+}
+.e-btn.e-btn-warn {
+  background-color: var(--btn-warn-bg-clr);
+  color: var(--btn-warn-text-clr);
+}
+.e-btn.e-btn-warn:hover {
+  background-color: var(--e-warn-300-clr);
+}
+.e-btn.e-btn-danger {
+  background-color: var(--btn-danger-bg-clr);
+  color: var(--btn-danger-text-clr);
+}
+.e-btn.e-btn-danger:hover {
+  background-color: var(--e-danger-300-clr);
+}
+.e-btn.e-btn-sm, .e-btn.e-btn-sq {
+  padding: var(--default-btn-sm-padding);
+}
+.e-btn.e-btn-sq {
+  width: calc(2rem + var(--btn-size));
+}
+.e-btn.e-btn-link {
+  padding: 0;
+  text-decoration: underline;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+.e-btn.e-btn-link:hover {
+  background-color: transparent;
+}
+
+.e-bdg {
+  border: 0;
+  border-radius: var(--default-brd-rad);
+  padding: var(--default-bdg-padding);
+  font-size: var(--bdg-size);
+  text-align: center;
+}
+.e-bdg.e-bdg-secondary {
+  background-color: var(--bdg-secondary-bg-clr);
+  color: var(--bdg-secondary-text-clr);
+}
+.e-bdg.e-bdg-success {
+  background-color: var(--bdg-success-bg-clr);
+  color: var(--bdg-success-text-clr);
+}
+.e-bdg.e-bdg-warn {
+  background-color: var(--bdg-warn-bg-clr);
+  color: var(--bdg-warn-text-clr);
+}
+.e-bdg.e-bdg-danger {
+  background-color: var(--bdg-danger-bg-clr);
+  color: var(--bdg-danger-text-clr);
 }
 
 /*# sourceMappingURL=styles.css.map */

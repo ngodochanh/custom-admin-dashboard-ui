@@ -1,0 +1,17 @@
+@use '../abstracts/variables' as *;
+
+.e-bdg {
+  border: 0;
+  border-radius: var(--default-brd-rad);
+  padding: var(--default-bdg-padding);
+  font-size: var(--bdg-size);
+  text-align: center;
+
+  // Tạo các kiểu khác nhau
+  @each $current-style in $badges {
+    &.e-bdg-#{$current-style} {
+      background-color: var(--bdg-#{$current-style}-bg-clr);
+      color: var(--bdg-#{$current-style}-text-clr);
+    }
+  }
+}

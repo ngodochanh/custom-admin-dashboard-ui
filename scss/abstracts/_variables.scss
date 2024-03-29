@@ -199,6 +199,15 @@ $e-colors: (
   --container-md: 121.5rem;
   --container-lg: 131.5rem;
   --container-xl: 156rem;
+
+  /* ******************** COMPONENTS ******************** */
+  --default-brd-rad: 0.4rem;
+  --default-btn-padding: 0.9rem 3rem;
+  --default-btn-sm-padding: 0.6rem 2rem;
+  --default-bdg-padding: 0.4rem 1.2rem;
+  --default-input-padding: 0.9rem 3rem;
+  --default-dropdown-width: 22.5rem;
+  --default-dropdown-mx-height: 35rem;
 }
 /********************\
 #TYPOGRAPHY
@@ -274,3 +283,12 @@ $containers: (
   lg: var(--container-lg),
   xl: var(--container-xl),
 );
+
+/********************\
+#BUTTONS
+\********************/
+$buttons: default primary secondary success warn danger;
+/********************\
+#BADGES
+\********************/
+$badges: secondary success warn danger;
