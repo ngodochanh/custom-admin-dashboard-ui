@@ -158,6 +158,7 @@ $e-colors: (
   --btn-warn-text-clr: var(--e-warn-clr);
   --btn-danger-bg-clr: var(--e-danger-100-clr);
   --btn-danger-text-clr: var(--e-danger-clr);
+  --btn-icon-hvr-bg: var(--e-gray-clr);
 
   /* ******************** TYPOGRAPHY ******************** */
   --base-font-size: 62.5%; // 10px (10 / 16) * 100 = 62.5
@@ -208,6 +209,10 @@ $e-colors: (
   --default-input-padding: 0.9rem 3rem;
   --default-dropdown-width: 22.5rem;
   --default-dropdown-mx-height: 35rem;
+
+  // Navbar
+  --default-navbar-height: 6rem;
+  --default-sidebar-nav-width: 25rem;
 }
 /********************\
 #TYPOGRAPHY
@@ -239,9 +244,12 @@ $font-sizes: (
 );
 
 $font-weights: (
+  // 400
   reg: var(--font-weight-regular),
+  // 500
   med: var(--font-weight-medium),
-  bld: var(--font-weight-bold),
+  // 700
+  bld: var(--font-weight-bold)
 );
 
 /********************\

@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 html {
   box-sizing: border-box;
@@ -29,4 +30,9 @@ a,
 i,
 span {
   display: inline-block;
+}
+
+a {
+  color: var(--global-text-clr);
+  @include transition;
 }

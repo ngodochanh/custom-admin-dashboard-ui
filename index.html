@@ -22,191 +22,170 @@
     <!-- CSS -->
     <link rel="stylesheet" href="dist/css/styles.css" />
     <!-- Favicon -->
-    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
   </head>
   <body>
-    <div class="e-container e-container-sm" style="border: 1px dashed green">
-      <p class="">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error assumenda corrupti nulla odit ex ullam
-        laboriosam atque accusantium harum fugit repudiandae architecto, cupiditate vero culpa deleniti veritatis
-        quibusdam qui. Rem!
-      </p>
+    <!-- Begin: header-->
+    <header class="e-header e-header-fixed e-d-flex e-justify-between e-align-center">
+      <div class="e-container">
+        <div class="e-offset-12 e-offset-md-3 e-offset-lg-2">
+          <nav class="e-header__nav e-d-flex e-justify-between e-align-center">
+            <!-- Begin: header left-->
+            <div class="e-header__left e-d-flex e-align-center e-mg-r-10 e-mg-r-0-md">
+              <div class="e-header__mobile e-mg-r-10 e-d-none-md">
+                <button type="button" class="e-icon-btn e-header__mobile--trigger" data-menu-target="main-menu">
+                  <i class="ri-menu-2-line e-fs-16"></i>
+                </button>
+              </div>
 
-      <h1>heading 1</h1>
-      <h2>heading 2</h2>
-      <h3>heading 3</h3>
-      <h4>heading 4</h4>
-      <h5>heading 5</h5>
-      <h6>heading 6</h6>
-
-      <div class="e-row" style="margin-bottom: 20px">
-        <div class="e-flex-6 e-flex-sm-3 e-mg-b-20 e-mg-b-0-md" style="border: 1px solid red">item 1</div>
-        <div class="e-flex-6 e-flex-sm-3 e-mg-b-20 e-mg-b-0-md" style="border: 1px solid red">item 2</div>
-        <div class="e-flex-6 e-flex-sm-3" style="border: 1px solid red">item 3</div>
-        <div class="e-flex-6 e-flex-sm-3" style="border: 1px solid red">item 4</div>
-        <div class="e-offset-3 e-flex-6" style="border: 1px solid blue; padding: 10px 20px">Hello</div>
-      </div>
-
-      <div class="e-offset-6" style="border: 1px solid blue; padding: 10px 20px">Hello</div>
-      <div class="" style="border: 1px solid blue; padding: 10px 20px">Hello</div>
-
-      <div class="e-mg-y-20">
-        <a href="" class="e-btn">Log out</a>
-        <a href="" class="e-btn e-btn-primary">primary</a>
-        <a href="" class="e-btn e-btn-secondary">secondary</a>
-        <a href="" class="e-btn e-btn-success">success</a>
-        <a href="" class="e-btn e-btn-success">warn</a>
-        <a href="" class="e-btn e-btn-success">danger</a>
-
-        <button class="e-btn e-btn-primary e-btn-sm"><i class="ri-arrow-up-line e-mg-r-10"></i>Export</button>
-        <button class="e-btn e-btn-primary e-btn-sq"><i class="ri-arrow-up-line"></i></button>
-
-        <a href="" class="e-btn e-btn-link e-btn-secondary">Button Link</a>
-      </div>
-
-      <div class="e-mg-y-20">
-        <div class="e-bdg e-bdg-success">Completed</div>
-        <div class="e-bdg e-bdg-secondary">In progress</div>
-        <div class="e-bdg e-bdg-warn">Pending</div>
-        <div class="e-bdg e-bdg-danger">Canceled</div>
-      </div>
-
-      <div class="e-mg-y-20">
-        <div class="e-avat e-avat-30">
-          <img src="images/user-f-1.jpg" alt="" />
-        </div>
-        <div class="e-avat e-avat-35">
-          <img src="images/user-f-1.jpg" alt="" />
-        </div>
-        <div class="e-avat e-avat-40">
-          <img src="images/user-f-1.jpg" alt="" />
-        </div>
-        <div class="e-avat e-avat-45">
-          <img src="images/user-f-1.jpg" alt="" />
-        </div>
-        <div class="e-avat e-avat-50">
-          <img src="images/user-f-1.jpg" alt="" />
-        </div>
-
-        <div class="e-avat-group">
-          <div class="e-avat e-avat-30">
-            <img src="images/user-f-1.jpg" alt="" class="e-avat__img" />
-          </div>
-
-          <div class="e-avat e-avat-30">
-            <img src="images/user-f-1.jpg" alt="" class="e-avat__img" />
-          </div>
-
-          <div class="e-avat e-avat-30">
-            <img src="images/user-f-1.jpg" alt="" class="e-avat__img" />
-          </div>
-
-          <div class="e-avat e-avat-30">
-            <img src="images/user-f-1.jpg" alt="" class="e-avat__img" />
-          </div>
-        </div>
-      </div>
-
-      <div class="e-card">
-        <div class="e-card__header">
-          <form class="e-form">
-            <div class="e-form__group">
-              <input type="text" class="e-form__input" placeholder="Search" />
-              <i class="ri-search-line e-form__icon e-fs-14"></i>
+              <div class="e-header__form">
+                <form action="" class="e-form">
+                  <div class="e-form__group">
+                    <input type="text" class="e-form__input" placeholder="Sreach...." />
+                    <i class="ri-search-line e-form__icon"></i>
+                  </div>
+                </form>
+              </div>
             </div>
-          </form>
-        </div>
-        <div class="e-card__body">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo odio corrupti quia perferendis ab
-            voluptatibus illo dolorem saepe animi molestiae in mollitia temporibus, aliquid, facere eum! Beatae optio
-            enim aliquid.
-          </p>
+            <!-- End: header left-->
+
+            <!-- Begin: header navitems-->
+            <ul class="e-header__navitems e-header__sidebar-md-3 e-header__sidebar-lg-2 e-pd-y-20" id="main-menu"></ul>
+            <!-- End: header navitems-->
+
+            <!-- Begin: header right-->
+            <div class="e-header__right e-d-flex e-align-center">
+              <div class="site-alert e-mg-r-10">
+                <button
+                  type="button"
+                  class="ease-modal-btn e-btn-icon"
+                  data-modal-target="subscription-reminder"
+                ></button>
+              </div>
+
+              <div class="theme-control e-mg-r-10">
+                <button type="button" class="theme-swicher e-btn-icon" data-current-theme="light">
+                  <i class="ri-moon-line theme-dark"></i>
+                  <i class="ri-sun-line theme-light"></i>
+                </button>
+              </div>
+
+              <div class="e-dropdown e-dropdown-abs-right e-d-in-flex e-mg-r-10">
+                <button type="button" class="e-btn e-btn-secondary e-btn-sq" data-dropdown-target="notifications">
+                  <i class="ri-notification-line e-fs-16"></i>
+                  <span class="e-bdg e-bdg-danger">4</span>
+                </button>
+
+                <div class="e-dropdown__menu" id="notifications">
+                  <div class="dropdown-header e-pd-20">
+                    <h6>Notifications</h6>
+                  </div>
+
+                  <ul class="dropdown-content">
+                    <li class="dropdown-list">
+                      <a href="" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2.46 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2.46 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2.46 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2.46 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="" class="dropdown-link e-d-block e-pd-x-20 e-pd-y-10">
+                        <span class="notice-time e-fs-12">2.46 PM</span>
+                        <span class="e-d-block notice-content e-fs-14 e-fw-bld">New task has been assigned</span>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <div class="dropdown-footer e-pd-20">
+                    <button type="button" class="e-btn e-btn-secondary e-btn-link">Mark all as read</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="e-dropdown e-dropdown-abs-right e-d-in-flex e-align-center">
+                <button type="button" class="e-avat e-avat-35" data-dropdown-target="profile">
+                  <img src="images/user-f-1.jpg" alt="" class="e-avat__img" />
+                </button>
+
+                <div class="e-dropdown__menu" id="profile">
+                  <!--Begin: Dropdown header -->
+                  <div class="dropdown-header e-pd-20">
+                    <div class="e-d-flex e-align-center">
+                      <div class="user-img e-mg-r-10">
+                        <div class="e-avat e-avat-35">
+                          <img src="images/user-f-1.jpg" alt="User" class="e-avat__img" />
+                        </div>
+                      </div>
+
+                      <div class="user-details">
+                        <span class="e-fw-bld e-fs-14 e-d-block">Jane Matthew</span>
+                        <span class="e-fs-12">Project manager</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!--End: Dropdown header -->
+
+                  <ul class="dropdown-content">
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-user-star-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-16 e-fw-bld">Profile</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-equalizer-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-16 e-fw-bld">Settings</span>
+                      </a>
+                    </li>
+
+                    <li class="dropdown-list">
+                      <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                        <i class="ri-task-line e-fs-16 e-mg-r-10"></i>
+                        <span class="e-fs-16 e-fw-bld">Tasks</span>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <div class="dropdown-footer">
+                    <a href="#" class="dropdown-link e-d-flex e-align-center e-pd-x-20 e-pd-y-10">
+                      <i class="ri-logout-box-r-line e-fs-18 e-mg-r-10"></i>
+                      <span class="e-fs-16 e-fw-bld">Sign out</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End: header right-->
+          </nav>
         </div>
       </div>
-
-      <div class="e-card">
-        <div class="e-card__header">
-          <span class="e-card__title e-fw-bld">Active project</span>
-          <span><i class="ri-arrow-up-line"></i></span>
-        </div>
-        <div class="e-card__body">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo odio corrupti quia perferendis ab
-            voluptatibus illo dolorem saepe animi molestiae in mollitia temporibus, aliquid, facere eum! Beatae optio
-            enim aliquid.
-          </p>
-        </div>
-      </div>
-
-      <div class="e-mg-y-20">
-        <form class="e-form">
-          <div class="e-form__group">
-            <input type="text" class="e-form__input" placeholder="Search" />
-            <i class="ri-search-line e-form__icon e-fs-14"></i>
-          </div>
-        </form>
-      </div>
-
-      <div class="e-overflow-auto e-mg-y-20">
-        <table class="e-tbl">
-          <thead class="e-tbl__header">
-            <tr class="e-tbl__row">
-              <th class="e-tbl__head">ID</th>
-              <th class="e-tbl__head">Name</th>
-              <th class="e-tbl__head">Email</th>
-              <th class="e-tbl__head">Project</th>
-              <th class="e-tbl__head">Salary</th>
-            </tr>
-          </thead>
-
-          <tbody class="e-tbl__body">
-            <tr class="e-tbl__row">
-              <td class="e-tbl__data">025</td>
-              <td class="e-tbl__data">John Doe</td>
-              <td class="e-tbl__data">J.doe@ease.com</td>
-              <td class="e-tbl__data">Ease Dashboard</td>
-              <td class="e-tbl__data">$125K</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="e-mg-y-20">
-        <div class="e-dropdown e-dropdown-abs-center e-d-in-block">
-          <div class="e-avat e-avat-30" data-dropdown-target="notifications">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Michelle_Rodriguez_by_Gage_Skidmore_2.jpg/375px-Michelle_Rodriguez_by_Gage_Skidmore_2.jpg"
-              alt=""
-              class="e-avat__img"
-            />
-          </div>
-
-          <div class="e-dropdown__menu" id="notifications">
-            <div class="e-fs-16 e-fw-med e-pd-20">Notifications</div>
-          </div>
-        </div>
-
-        <div class="e-dropdown e-dropdown-abs-left e-dropdown-abs-center-md e-dropdown-abs-right-lg e-d-in-block">
-          <div class="e-avat e-avat-40" data-dropdown-target="message">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Michelle_Rodriguez_by_Gage_Skidmore_2.jpg/375px-Michelle_Rodriguez_by_Gage_Skidmore_2.jpg"
-              alt=""
-              class="e-avat__img"
-            />
-          </div>
-
-          <div class="e-dropdown__menu" id="message">
-            <div class="e-fs-16 e-fw-med e-pd-20">Message</div>
-            <p class="e-pd-20">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus cumque veniam quibusdam. Porro
-              exercitationem sunt perspiciatis ex blanditiis, dolorem magni id debitis error eligendi dolores voluptatem
-              repudiandae nostrum qui nesciunt.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    </header>
+    <!-- End: header-->
+    <main></main>
 
     <script src="./js/main.js"></script>
   </body>

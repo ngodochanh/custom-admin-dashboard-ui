@@ -51,3 +51,19 @@
     }
   }
 }
+
+.e-btn-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  border-radius: 50%;
+  text-align: center;
+  font-size: var(--icon-size);
+  background-color: transparent;
+  @include transition;
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-icon-hvr-bg);
+  }
+}
